@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="450">
     <Grid>
         <StackPanel>
-            <TextBlock Text="{Binding Person.Name, StringFormat= Welcome {0}} "/>
-            <TextBox Text="{Binding Person.Name, Mode=OneWayToSource}" Width="200" Height="20" Margin= "0, 20, 0, 0"/>
-            <Button Height="20" Width="200" Margin="10" Content="Button 1"/>
+            <TextBlock Text="{Binding person.Name, StringFormat= Welcome {0}}"/>
+            <TextBox Text="{Binding person.fakename, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Width="200" Height="20" Margin= "0, 20, 0, 0"/>
+            <Button Height="20" Width="200" Margin="10" Content="Button 1" Click="Button_Click"/>
             <Button Height="20" Width="200" Content="Button 2"/>
         </StackPanel>
     </Grid>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfPractice.ViewModels;
 
 namespace WpfPractice
 {
@@ -20,9 +21,19 @@ namespace WpfPractice
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mainViewModel { get; set; }
         public MainWindow()
         {
+            mainViewModel = new MainViewModel();
+
+            DataContext = mainViewModel;
+
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
